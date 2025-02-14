@@ -117,7 +117,7 @@ function onUserShoot(shootType) {
       alert('졌습니다');
       textElement.innerHTML = "졌습니다"
     }else {
-      alert('비겼습니다')
+      alert('비겼습니다');
       textElement.innerHTML = "비겼습니다"
     }
   }
