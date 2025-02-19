@@ -78,22 +78,13 @@ function onComputerShoot() {
 
   let shootType = Math.random() < 0.5 ? 2 : 3;
 
-  if (shootType === 2) {
-    if (Math.random() < computer.percent2) {
-      showText('컴퓨터가 2점슛을 성공시켰습니다');
-      updateComScore(2);
-    } else {
-      showText('컴퓨터가 2점슛을 실패했습니다');
-    }
+  if (Math.random() < computer['percent' + shootType]){ // 그럼 결과값은 'persent2' 거나 'percent3'가 되므오 computer['percent2']/computer['percent3']의 value가 산출됨
+    showText('컴퓨터가 ' + shootType + '점 슛을 성공시켰습니다')
+    updateComScore(2);
   } else {
-    if(Math.random() < computer.percent3) {
-      showText('컴퓨터가 3점슛을 성공시켰습니다');
-      updateComScore(2);
-    } else {
-      showText('컴퓨터가 3점슛을 실패했습니다');
-    }
+    showText('컴퓨터가 ' + shootType + '점 슛을 실패했습니다')
   }
-
+  
   game.isComputerTurn = false;
   disabledComButton(true);
   disabledUserButton(false);
