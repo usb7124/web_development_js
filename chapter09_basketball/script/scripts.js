@@ -17,18 +17,18 @@ function onComputerShoot() {
   if (shootType === 2) {
     if (Math.random() < 0.5) {
       // 2점슛 1/2 확률로 성공
-      textElement.innerHTML = '컴퓨터가 2점슛을 성공시켰습니다';
+      textElement.innerHTML = '컴퓨터가 2점슛을 성공시켰습니다.🏀 now - user';
       comScore += 2;
 
       comScoreElement.innerHTML = comScore;
     } else {
       // 실패했을 때
-      textElement.innerHTML = '컴퓨터가 2점슛을 실패했습니다';
+      textElement.innerHTML = '컴퓨터가 2점슛을 실패했습니다!🎈 now - user';
     }
   } else {
     if(Math.random() < 0.33) {
       // 3점슛 1/3 확률로 성공
-      textElement.innerHTML = '컴퓨터가 3점슛을 성공시켰습니다';
+      textElement.innerHTML = '컴퓨터가 3점슛을 성공시켰습니다ㅠㅠ 🎆 now - user';
       comScore += 3;
 
       comScoreElement.innerHTML = comScore;
@@ -63,24 +63,24 @@ function onUserShoot(shootType) {
   if (shootType === 2) {
     if (Math.random() < 0.5) {
       // 2점슛 1/2 확률로 성공
-      textElement.innerHTML = '2점슛을 성공시켰습니다';
+      textElement.innerHTML = '2점슛을 성공시켰습니다.🏀 now - computer';
       userScore += 2;
 
       userScoreElement.innerHTML = userScore;
     } else {
       // 실패했을 때
-      textElement.innerHTML = '2점슛을 실패했습니다';
+      textElement.innerHTML = '2점슛을 실패했습니다!🎈 now - computer';
     }
   } else {
     if(Math.random() < 0.33) {
       // 3점슛 1/3 확률로 성공
-      textElement.innerHTML = '3점슛을 성공시켰습니다';
+      textElement.innerHTML = '3점슛을 성공시켰습니다 🎆 now - computer';
       userScore += 3;
 
       userScoreElement.innerHTML = userScore;
     } else {
       // 실패했을 때
-      textElement.innerHTML = '3점슛을 실패했습니다';
+      textElement.innerHTML = '3점슛을 실패했습니다ㅜㅜㅜ👓 now - computer';
     }
   }
 
@@ -115,23 +115,10 @@ function onUserShoot(shootType) {
       textElement.innerHTML = '이겼습니다'
     } else if (userScore < comScore) {
       alert('졌습니다');
-      textElement.innerHTML = "졌습니다"
-    }else {
+      textElement.innerHTML = '졌습니다'
+    } else {
       alert('비겼습니다');
-      textElement.innerHTML = "비겼습니다"
+      textElement.innerHTML = '비겼습니다'
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
